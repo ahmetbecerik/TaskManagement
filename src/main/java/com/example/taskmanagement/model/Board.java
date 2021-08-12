@@ -31,6 +31,8 @@ public class Board {
 
     //public void removeCard(Card card) {cards.remove(card);}
 
+    //github denemek için yazılmıştır.
+
 
 
 }
