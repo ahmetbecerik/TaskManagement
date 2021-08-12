@@ -1,0 +1,5 @@
+com\example\taskmanagement\repository\BoardRepository.class
+com\example\taskmanagement\TaskManagementApplication.class
+com\example\taskmanagement\repository\CardRepository.class
+com\example\taskmanagement\model\Board.class
+com\example\taskmanagement\model\Card.class
