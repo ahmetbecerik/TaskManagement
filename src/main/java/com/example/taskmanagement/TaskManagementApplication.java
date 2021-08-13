@@ -31,6 +31,8 @@ public class TaskManagementApplication {
         List<Card> cards2 = Arrays.asList(card2, card3);
         board2.setCards(cards2);
         boardRepository.save(board2);
+        //Github için farklı bi deney süreci.
+        //terminal denemesi
 
     }
 
