@@ -19,7 +19,7 @@ public class Board {
     )
     private List<Card> cards = new ArrayList<>();
 
-    public Board(String name){
+    public Board(String name, String title){
         this.title = name;
     }
 
