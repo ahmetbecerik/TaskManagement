@@ -8,16 +8,16 @@ import java.util.List;
 
 public class BoardService {
 
-    private static HashMap<Integer, Board> boardHashMap = getboardHasMap();
+    private static HashMap<Integer, Board> boardHashMap = getBoardHashMap();
 
-    public BoardService{
+    public BoardService(){
         super();
         if(boardHashMap == null){
 
             boardHashMap = new HashMap<Integer, Board>();
 
-            Board board1 = new Board("board-1", "board1");
-            Board board2 = new Board("board-2", "board2");
+            Board board1 = new Board(1, "board-1", "board1");
+            Board board2 = new Board( 2,"board-2", "board2");
 
             boardHashMap.put(1,board1);
             boardHashMap.put(2,board2);

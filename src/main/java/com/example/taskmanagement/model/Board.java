@@ -10,8 +10,11 @@ import java.util.List;
 public class Board {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private int id;
     private String title;
+    public Board (){
+        super();
+    }
     @OneToMany(
             mappedBy = "board",
             cascade = CascadeType.ALL,
@@ -19,7 +22,8 @@ public class Board {
     )
     private List<Card> cards = new ArrayList<>();
 
-    public Board(String name, String title){
+    public Board(int id, String name, String title){
+        this.id = id;
         this.title = name;
     }
 
@@ -27,12 +31,21 @@ public class Board {
         this.cards = cards;
     }
 
-    //public void addCard(Card card) {cards.add(card);}
+    public int getId() {
+        return id;
+    }
 
-    //public void removeCard(Card card) {cards.remove(card);}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    //github denemek için yazılmıştır.
+    public String getTitle(){
+        return title;
+    }
 
+    public void setTitle(String title){
+        this.title = title;
+    }
 
 
 }

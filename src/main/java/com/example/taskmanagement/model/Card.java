@@ -1,8 +1,6 @@
 package com.example.taskmanagement.model;
 //manytoone
 
-import org.springframework.context.annotation.Primary;
-
 import javax.persistence.*;
 
 @Entity
@@ -10,18 +8,53 @@ import javax.persistence.*;
 public class Card{
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
-        private Long id;
+        private int id;
         private String title;
         private String description;
         @ManyToOne
         @JoinColumn(name = "board_id")
         private Board board;
 
-        public Card(String title, String description, Board board) {
+        public Card(int id, String title, String description) {
+                super();
+                this.id = id;
                 this.title = title;
                 this.description = description;
+        }
+
+
+        public int getId() {
+                return id;
+        }
+
+        public void setId(int id) {
+                this.id = id;
+        }
+
+        public String getTitle() {
+                return title;
+        }
+
+        public void setTitle(String title){
+                this.title = title;
+        }
+
+        public String getDescription(){
+                return description;
+        }
+
+        public void setDescription(String description){
+                this.description = description;
+        }
+
+        public Board getBoard(){
+                return board;
+        }
+
+        public void setBoard(Board board){
                 this.board = board;
         }
+
 
 }
 

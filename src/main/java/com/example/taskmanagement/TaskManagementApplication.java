@@ -20,11 +20,11 @@ public class TaskManagementApplication {
         ConfigurableApplicationContext configurableApplicationContext = SpringApplication.run(TaskManagementApplication.class, args);
         BoardRepository boardRepository = configurableApplicationContext.getBean(BoardRepository.class);
 
-        Board board1 = new Board("board-1", "board-1");
-        Board board2 = new Board("board-2", "board-2");
-        Card card1 = new Card("board-1","description", board1);
-        Card card2 = new Card("board-2", "description", board2);
-        Card card3 = new Card("board-2", "description", board2);
+        Board board1 = new Board(1,"board-1", "board-1");
+        Board board2 = new Board(2,"board-2", "board-2");
+        Card card1 = new Card(1,"board-1","description");
+        Card card2 = new Card(2,"board-2", "description");
+        Card card3 = new Card(3,"board-2", "description");
         List<Card> cards = Arrays.asList(card1);
         board1.setCards(cards);
         boardRepository.save(board1);

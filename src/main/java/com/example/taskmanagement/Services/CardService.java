@@ -1,5 +1,6 @@
 package com.example.taskmanagement.Services;
 
+import com.example.taskmanagement.model.Board;
 import com.example.taskmanagement.model.Card;
 
 import java.util.ArrayList;
@@ -8,17 +9,16 @@ import java.util.List;
 
 public class CardService {
 
-    private static HashMap<Integer, Card> cardHashMap = getcardHashmap();
+    private static HashMap<Integer, Card> cardHashMap = getCardHashMap();
 
     public CardService(){
         super();
         if(cardHashMap == null) {
 
             cardHashMap = new HashMap<Integer, Card>();
-
-            Card card1 = new Card("board-1","description", board1);
-            Card card2 = new Card("board-2", "description", board2);
-            Card card3 = new Card("board-2", "description", board2);
+            Card card1 = new Card(1,"board-1","description");
+            Card card2 = new Card(2,"board-2", "description");
+            Card card3 = new Card(3,"board-2", "description");
 
             cardHashMap.put(1,card1);
             cardHashMap.put(2,card2);
