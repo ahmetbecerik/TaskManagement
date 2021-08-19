@@ -34,8 +34,7 @@ public class BoardController {
     }
 
     @RequestMapping(value = "/update-board", method = RequestMethod.PUT, headers = "Accept=application/json")
-    public Board updateBoard (@RequestBody Board board){
-        return boardService.updateBoard(board);
+    public Board updateBoard(@RequestBody Board board){return boardService.updateBoard (board);
     }
 
     @RequestMapping(value = "/delete-board/{id}", method = RequestMethod.DELETE, headers = "Accept=application/json")

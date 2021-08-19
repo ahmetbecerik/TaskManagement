@@ -1,7 +1,6 @@
 package com.example.taskmanagement.Controller;
 
 import com.example.taskmanagement.Services.CardService;
-import com.example.taskmanagement.model.Board;
 import com.example.taskmanagement.model.Card;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,11 +27,8 @@ public class CardController {
     }
 
     @RequestMapping(value = "/update-card", method = RequestMethod.PUT, headers = "Accept=application/json")
-    public Card updateCard(@RequestBody Card card){
-        return cardService.updateCard(card);
+    public Card updateCard(@RequestBody Card card){return cardService.updateCard(card);
     }
-
-
 
     @RequestMapping(value = "/delete-card/{id}", method = RequestMethod.DELETE, headers = "Accept=application/json")
     public void deleteCard(@PathVariable("id") int id){
